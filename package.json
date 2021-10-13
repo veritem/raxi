@@ -4,11 +4,15 @@
     "description": "A better typescript package development framework",
     "main": "index.ts",
     "type": "module",
+    "workspaces": [
+        "packages/*"
+    ],
     "scripts": {
         "start": "tsc -p tsconfig.json --watch",
         "build": "tsc -p tsconfig.json",
+        "dev": "node --experimental-specifier-resolution=node dist/index.js",
         "test": "jest",
-        "format": "prettier src/**/*.ts --write --loglevel=error",
+        "format": "prettier --write . --loglevel=error",
         "prepare": "husky install"
     },
     "repository": {
