@@ -1,6 +1,3 @@
 describe('show pass', () => {
-    test('should ', () => {
-
-    })
-
+    test('should ', () => {})
 })

@@ -1,45 +1,47 @@
 {
-  "name": "lo",
-  "version": "1.0.0",
-  "description": "A better typescript package development framework",
-  "main": "index.ts",
-  "type": "module",
-  "scripts": {
-    "start": "tsc -p tsconfig.json --watch",
-    "build": "tsc -p tsconfig.json",
-    "test": "jest",
-    "format": "prettier src/**/*.ts --write --loglevel=error",
-    "prepare": "husky install"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/veritem/lo.git#main"
-  },
-  "keywords": [
-    "packages"
-  ],
-  "author": "Makuza Mugabo Verite (https://veritem.me)",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/veritem/lo/issues"
-  },
-  "engines": {
-    "node": ">= 12"
-  },
-  "homepage": "https://github.com/veritem/lo/tree/main#readme",
-  "dependencies": {
-    "meow": "^10.1.1",
-    "sade": "^1.7.4",
-    "vite": "^2.5.10"
-  },
-  "devDependencies": {
-    "@types/jest": "27.0.2",
-    "@types/node": "16.10.1",
-    "@types/sade": "1.7.3",
-    "husky": "7.0.2",
-    "jest": "27.2.2",
-    "prettier": "2.4.1",
-    "ts-jest": "27.0.5",
-    "typescript": "4.4.3"
-  }
+    "name": "rudi",
+    "version": "1.0.0",
+    "description": "A better typescript package development framework",
+    "main": "index.ts",
+    "type": "module",
+    "scripts": {
+        "start": "tsc -p tsconfig.json --watch",
+        "build": "tsc -p tsconfig.json",
+        "test": "jest",
+        "format": "prettier src/**/*.ts --write --loglevel=error",
+        "prepare": "husky install"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/veritem/lo.git#main"
+    },
+    "keywords": [
+        "packages"
+    ],
+    "author": "Makuza Mugabo Verite (https://veritem.me)",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/veritem/lo/issues"
+    },
+    "engines": {
+        "node": ">= 12"
+    },
+    "homepage": "https://github.com/veritem/lo/tree/main#readme",
+    "dependencies": {
+        "meow": "^10.1.1",
+        "prompts": "^2.4.2",
+        "sade": "^1.7.4",
+        "vite": "^2.5.10"
+    },
+    "devDependencies": {
+        "@types/jest": "27.0.2",
+        "@types/node": "16.10.1",
+        "@types/prompts": "^2.0.14",
+        "@types/sade": "1.7.3",
+        "husky": "7.0.2",
+        "jest": "27.2.2",
+        "prettier": "2.4.1",
+        "ts-jest": "27.0.5",
+        "typescript": "4.4.3"
+    }
 }

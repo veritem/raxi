@@ -1,1 +1,5 @@
-- [For notification](https://github.com/yeoman/update-notifier)
+## Rudi
+
+A smooth typescript development workflow.
+
+### Getting started
