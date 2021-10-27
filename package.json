@@ -2,7 +2,7 @@
     "name": "rudi",
     "version": "1.0.0",
     "description": "A better typescript package development framework",
-    "main": "index.ts",
+    "main": "./index.js",
     "type": "module",
     "workspaces": [
         "packages/*"

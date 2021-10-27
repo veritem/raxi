@@ -1,6 +1,6 @@
 import prompts, { PromptObject } from 'prompts'
 
-export async function init () {
+export async function init() {
     let questions: PromptObject[] = [
         {
             type: 'text',

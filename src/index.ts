@@ -1,8 +1,7 @@
 #!/usr/bin/env node
 
 import sade from 'sade'
-
-import { init } from './commands/init'
+import { init } from './init.js'
 
 const program = sade('rudi')
 
