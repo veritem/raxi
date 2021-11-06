@@ -6,9 +6,10 @@
         "importHelpers": false,
         "strict": true,
         "rootDir": "src",
+        "moduleResolution": "node",
         "esModuleInterop": true,
         "skipLibCheck": true,
         "forceConsistentCasingInFileNames": true
     },
-    "exclude": ["tests"]
+    "exclude": ["tests", "starters"]
 }

@@ -2,15 +2,12 @@
     "name": "rudi",
     "version": "1.0.0",
     "description": "A better typescript package development framework",
-    "main": "./index.js",
+    "exports": "./dist/index.js",
     "type": "module",
-    "workspaces": [
-        "packages/*"
-    ],
     "scripts": {
         "start": "tsc -p tsconfig.json --watch",
         "build": "tsc -p tsconfig.json",
-        "dev": "node --experimental-specifier-resolution=node dist/index.js",
+        "dev": "./dist/index.js",
         "test": "jest",
         "format": "prettier --write . --loglevel=error",
         "prepare": "husky install"
@@ -32,6 +29,7 @@
     },
     "homepage": "https://github.com/veritem/lo/tree/main#readme",
     "dependencies": {
+        "chalk": "^4.1.2",
         "meow": "^10.1.1",
         "prompts": "^2.4.2",
         "sade": "^1.7.4",
