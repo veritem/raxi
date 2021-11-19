@@ -38,7 +38,7 @@
         "vite": "^2.5.10"
     },
     "devDependencies": {
-        "@types/jest": "27.0.2",
+        "@types/jest": "27.0.3",
         "@types/node": "16.11.6",
         "@types/prompts": "^2.0.14",
         "@types/sade": "1.7.3",
