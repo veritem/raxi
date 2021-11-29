@@ -2,4 +2,5 @@
 
 A smooth typescript development workflow.
 
-### Getting started
+> Experimental 
+> This shouldn't be used on anything serious yet! 
