@@ -1,0 +1,12 @@
+{
+    "name": "starter",
+    "scripts": {
+        "dev": "rudi build"
+    },
+    "dependencies": {
+        "rudi": "latest"
+    },
+    "devDependencies": {
+        "typescript:": "latest"
+    }
+}

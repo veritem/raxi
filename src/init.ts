@@ -1,8 +1,32 @@
-import prompts, { PromptObject } from 'prompts'
 import chalk from 'chalk'
 import fs from 'fs'
+import fse from 'fs-extra'
+import path from 'path'
+import prompts, { PromptObject } from 'prompts'
+
+type StarterPrompts = {
+    title: string
+    value: string
+}
+
+function get_starters(): StarterPrompts[] {
+    let directories: string[] = fs.readdirSync(
+        path.join(process.cwd(), 'starters')
+    )
+
+    return directories
+        .filter((item) => item != 'shared')
+        .sort()
+        .map((item) => {
+            return { title: item, value: item }
+        })
+}
 
 export async function init() {
+    console.log('\n\n\n')
+    console.log('Rudi - Better typescript development workflow')
+    console.log('\n')
+
     let questions: PromptObject[] = [
         {
             type: 'text',
@@ -13,26 +37,42 @@ export async function init() {
             type: 'select',
             name: 'type',
             message: 'select your project type?',
-            choices: [
-                { title: 'cli', value: 'cli' },
-                { title: 'basic typescript project', value: 'simple' },
-                { title: 'react-component', value: 'react' },
-            ],
+            choices: [...get_starters()],
         },
     ]
 
     const response = await prompts(questions)
-    console.log({ response })
-    console.log(chalk.green('creating a new project ' + response.name))
 
-    // TODO: loop through all of our templates and create a new project based on that
-    console.log(process.cwd())
-    // Get all templates in starters and take one with the same value name as the one selected
-    const sampleDirs = fs
-        .readdirSync('./starters', { withFileTypes: true })
-        .filter((item) => item.isDirectory())
-        .map((item) => item.name)
-    console.log(sampleDirs)
-    // If it doesn't exists exists
-    // If it exists copy it to the current directory
+    const project_path: string = path.join(process.cwd(), response.name)
+    const template_path: string = path.join(
+        process.cwd(),
+        'starters',
+        response.type
+    )
+    const shared_path: string = path.resolve(
+        process.cwd(),
+        'starters',
+        'shared'
+    )
+
+    if (fs.existsSync(project_path)) {
+        console.log(chalk.red(`project ${response.name} already exsits`))
+        //TODO: Support overriding in future
+        return
+    }
+
+    await fse.copySync(template_path, project_path)
+
+    // copy shared files
+    await fse.copy(shared_path, project_path)
+
+    //rename dotsfiles
+    await fse.move(
+        path.join(project_path, 'gitignore'),
+        path.join(project_path, '.gitignore')
+    )
+
+    console.log('\n')
+
+    console.log(chalk.yellowBright(`${response.name} project created`))
 }

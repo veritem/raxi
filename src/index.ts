@@ -1,7 +1,8 @@
 #!/usr/bin/env node
-
 import sade from 'sade'
-import { init } from './init.js'
+import { build_app } from './build'
+import { dev } from './dev'
+import { init } from './init'
 
 const program = sade('rudi')
 
@@ -9,26 +10,22 @@ program.version('0.0.1')
 
 program
     .command('build')
-    .describe('Build the project')
-    .action((src, dest, opts) => {
-        console.log({ src })
-        console.log({ dest })
-        console.log({ opts })
+    .describe('build the project')
+    .action(async () => {
+        await build_app().catch((err) => {
+            console.error(err)
+            process.exit(1)
+        })
     })
     .command('init')
-    .describe('Scafold new project')
+    .describe('scafold new project')
     .action(async () => {
         await init()
     })
-    .command('lint')
-    .describe('lint your project')
-    .action(() => {
-        console.log('lint your project')
-    })
-    .command('test')
-    .describe('Run tests for your project')
-    .action(() => {
-        console.log('testing your application')
+    .command('dev')
+    .describe('start development')
+    .action(async () => {
+        await dev()
     })
 
 program.parse(process.argv)

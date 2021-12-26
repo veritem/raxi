@@ -2,10 +2,10 @@
     "compilerOptions": {
         "target": "ES2017",
         "module": "ES2020",
-        "outDir": "./dist",
+        "outDir": "dist",
         "importHelpers": false,
         "strict": true,
-        "rootDir": "src",
+        "rootDir": ".",
         "moduleResolution": "node",
         "esModuleInterop": true,
         "skipLibCheck": true,
