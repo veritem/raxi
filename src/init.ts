@@ -23,7 +23,7 @@ function get_starters(): StarterPrompts[] {
 }
 
 export async function init() {
-    console.log('\n\n\n')
+    console.log('\n')
     console.log('Rudi - Better typescript development workflow')
     console.log('\n')
 
@@ -56,8 +56,8 @@ export async function init() {
     )
 
     if (fs.existsSync(project_path)) {
-        console.log(chalk.red(`project ${response.name} already exsits`))
         //TODO: Support overriding in future
+        console.log(chalk.red(`project ${response.name} already exsits`))
         return
     }
 
