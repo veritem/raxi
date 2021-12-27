@@ -1,51 +1,47 @@
 import childProcess from 'child_process'
-import fs from "fs-extra"
+import fs from 'fs-extra'
 import path from 'path'
-import util from "util"
+import util from 'util'
 import { beforeAll, describe, expect, test } from 'vitest'
 
-const execFile = util.promisify(childProcess.execFile);
+const execFile = util.promisify(childProcess.execFile)
 const spawn = childProcess.spawn
 const rudi = path.normalize('dist/index.mjs')
 
-
 const keys = {
-  up: "\x1B\x5B\x41",
-  down: "\x1B\x5B\x42",
-  enter: "\x0D",
-  space: "\x20"
-};
-
+    up: '\x1B\x5B\x41',
+    down: '\x1B\x5B\x42',
+    enter: '\x0D',
+    space: '\x20',
+}
 
 describe('Should create a new project', () => {
-
-    beforeAll(()=> {
-      if(!fs.existsSync(rudi)){
-         throw new Error("Rudi not found")
-      }
+    beforeAll(() => {
+        if (!fs.existsSync(rudi)) {
+            throw new Error('Rudi not found')
+        }
     }, 100)
 
-    test('It should gude user through the process', done => {
-        let cli = spawn('node', [rudi, "init"], {})
-        let promptCount = 0;
-        let previousPrompt: string;
-
-
+    test('It should gude user through the process', (done) => {
+        let cli = spawn('node', [rudi, 'init'], {})
+        let promptCount = 0
+        let previousPrompt: string
 
         cli.stdout.on('data', (data) => {
-
             let prompt = cleanPrompt(data)
-            if(!prompt) return
+            if (!prompt) return
 
             promptCount++
 
             switch (promptCount) {
                 case 1:
-                    expect(prompt).toEqual("\nRudi - Better typescript development workflow")
+                    expect(prompt).toEqual(
+                        '\nRudi - Better typescript development workflow'
+                    )
                 case 2:
                     expect(prompt).toContain('Project name?')
                     cli.stdin.write('test_app\n')
-                    break;
+                    break
                 case 3:
                     expect(prompt).toContain('select your project type?')
                     let choices = getPromptChoices(prompt)
@@ -53,14 +49,14 @@ describe('Should create a new project', () => {
                     expect(choices).toContain('monorepo')
                     expect(choices).toContain('simple')
                     cli.stdin.write(keys.enter)
-                break
+                    break
             }
             previousPrompt = prompt
             console.log(data.toString())
         })
 
-        cli.on("exit", () => {
-           done()
+        cli.on('exit', () => {
+            done()
         })
     })
 })

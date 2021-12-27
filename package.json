@@ -2,7 +2,7 @@
     "name": "rudi",
     "version": "1.0.0",
     "description": "A better typescript package development framework",
-    "module": "dist/index.ts.mjs",
+    "module": "dist/index.mjs",
     "types": "dist/index.d.ts",
     "exports": {
         ".": {
@@ -15,6 +15,7 @@
         "dev": "unbuild --stub",
         "test": "vitest",
         "format": "prettier --ignore-path .gitignore --write . --loglevel=error",
+        "prepublish": "unbuild",
         "prepare": "husky install"
     },
     "repository": {
