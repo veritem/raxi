@@ -1,6 +1,6 @@
 {
-    "name": "rudi",
-    "version": "1.0.0",
+    "name": "raxi",
+    "version": "0.0.1",
     "description": "A better typescript package development framework",
     "module": "dist/index.mjs",
     "types": "dist/index.d.ts",
