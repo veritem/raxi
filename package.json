@@ -1,6 +1,6 @@
 {
     "name": "raxi",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "A better typescript package development framework",
     "module": "dist/index.mjs",
     "types": "dist/index.d.ts",
@@ -30,7 +30,7 @@
     "bugs": {
         "url": "https://github.com/veritem/lo/issues"
     },
-    "bin": "dist/index.ts.mjs",
+    "bin": "dist/index.mjs",
     "engines": {
         "node": ">= 14"
     },

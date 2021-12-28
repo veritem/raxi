@@ -1,10 +1,11 @@
-## Rudi
+## raxi
 
-Tool kit to build modern typescript libraries and clis
+Toolkit for modern typescript packages.
 
-### Inspiration
+## Getting started
 
-This project was originally inspired by
+```
+npx raxi init
+```
 
--   [Tsdx](https://github.com/jaredpalmer/tsdx)
--   and a bunch of other open source templates
+Select the setup you want to use.

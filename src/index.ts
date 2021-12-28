@@ -4,7 +4,7 @@ import { build_app } from './build'
 import { dev } from './dev'
 import { init } from './init'
 
-const program = sade('rudi')
+const program = sade('raxi')
 
 program.version('0.0.1')
 
