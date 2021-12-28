@@ -3,6 +3,7 @@ import fs from 'fs'
 import fse from 'fs-extra'
 import path from 'path'
 import prompts, { PromptObject } from 'prompts'
+import { appPath } from './utils'
 
 type StarterPrompts = {
     title: string
@@ -10,9 +11,7 @@ type StarterPrompts = {
 }
 
 function get_starters(): StarterPrompts[] {
-    let directories: string[] = fs.readdirSync(
-        path.join(process.cwd(), 'starters')
-    )
+    let directories: string[] = fs.readdirSync(path.join(appPath, 'starters'))
 
     return directories
         .filter((item) => item != 'shared')
@@ -44,16 +43,8 @@ export async function init() {
     const response = await prompts(questions)
 
     const project_path: string = path.join(process.cwd(), response.name)
-    const template_path: string = path.join(
-        process.cwd(),
-        'starters',
-        response.type
-    )
-    const shared_path: string = path.resolve(
-        process.cwd(),
-        'starters',
-        'shared'
-    )
+    const template_path: string = path.join(appPath, 'starters', response.type)
+    const shared_path: string = path.resolve(appPath, 'starters', 'shared')
 
     if (fs.existsSync(project_path)) {
         //TODO: Support overriding in future
