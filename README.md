@@ -14,11 +14,9 @@ Toolkit for modern typescript packages.
 pnpm dlx raxi init
 ```
 
-
 Want to use the latest commit?
 
-> clone the repo  and then run 
-
+> clone the repo and then run
 
 ```bash
 pnpm link --global
