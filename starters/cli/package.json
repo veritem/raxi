@@ -1,12 +1,12 @@
 {
     "name": "starter",
     "scripts": {
-        "dev": "raxi build"
+        "build": "unbuild",
+        "dev": "unbuild --stub"
     },
-    "dependencies": {
-        "raxi": "latest"
-    },
+    "dependencies": {},
     "devDependencies": {
-        "typescript:": "latest"
+        "typescript:": "latest",
+        "unbuild": "latest"
     }
 }

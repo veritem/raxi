@@ -1,12 +1,12 @@
 {
-    "name": "starter",
+    "name": "monorepo",
     "scripts": {
-        "dev": "rudi build"
+        "build": "unbuild",
+        "dev": "unbuild --stub"
     },
-    "dependencies": {
-        "rudi": "latest"
-    },
+    "dependencies": {},
     "devDependencies": {
-        "typescript:": "latest"
+        "typescript:": "latest",
+        "unbuild": "latest"
     }
 }

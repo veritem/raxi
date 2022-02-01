@@ -1,9 +1,7 @@
-## Project
+## [name here]
 
-Start from here
+![npm](https://img.shields.io/npm/v/<name>)
 
-## This project includes
 
--   Unbuild for build library supporting esm and cjs
--   Uses vitest for testing
--   And TypeScript ofcourse
+
+[Your name] licence &copy; 2022
