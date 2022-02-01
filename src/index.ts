@@ -1,16 +1,13 @@
 #!/usr/bin/env node
 
-import fs from 'fs-extra'
-import path from 'path'
 import sade from 'sade'
 import { init } from './init'
-import { appPath } from './utils'
 
 const program = sade('raxi')
 
-let packageJSON = fs.readJSONSync(path.join(appPath, 'package.json'))
+// let packageJSON = fs.readJSONSync(path.join(appPath, 'package.json'))
 
-program.version(packageJSON.version)
+// program.version(packageJSON.version)
 
 program
     // .command('build')
