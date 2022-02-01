@@ -1,8 +1,8 @@
-import childProcess from 'child_process';
-import fs from 'fs-extra';
-import path from 'path';
-import util from 'util';
-import { describe, expect, test } from 'vitest';
+import childProcess from 'child_process'
+import fs from 'fs-extra'
+import path from 'path'
+import util from 'util'
+import { describe, expect, test } from 'vitest'
 
 const execFile = util.promisify(childProcess.execFile)
 const spawn = childProcess.spawn
