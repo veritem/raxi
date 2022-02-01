@@ -4,7 +4,7 @@
 
 Toolkit for modern typescript packages.
 
--   Mininaml
+-   Mininamal
 -   Fully typed
 -   Extendable
 
@@ -14,19 +14,11 @@ Toolkit for modern typescript packages.
 pnpm dlx raxi init
 ```
 
-Select the setup you want to use.
 
 Want to use the latest commit?
 
-clone then
+> clone the repo  and then run 
 
-```bash
-git clone https://github.com/veritem/raxi.git
-```
-
-```bash
-pnpm install
-```
 
 ```bash
 pnpm link --global
