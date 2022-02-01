@@ -1,10 +1,10 @@
 {
     "name": "starter",
     "scripts": {
-        "dev": "rudi build"
+        "dev": "raxi build"
     },
     "dependencies": {
-        "rudi": "latest"
+        "raxi": "latest"
     },
     "devDependencies": {
         "typescript:": "latest"

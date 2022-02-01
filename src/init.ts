@@ -23,7 +23,7 @@ function get_starters(): StarterPrompts[] {
 
 export async function init() {
     console.log('\n')
-    console.log('Rudi - Better typescript development workflow')
+    console.log('Raxi - Better typescript development workflow')
     console.log('\n')
 
     let questions: PromptObject[] = [
