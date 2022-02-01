@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "target": "ES2017",
+        "module": "ES2020",
+        "outDir": "dist",
+        "importHelpers": false,
+        "strict": true,
+        "rootDir": ".",
+        "moduleResolution": "node",
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true
+    },
+    "exclude": ["tests", "starters"]
+}

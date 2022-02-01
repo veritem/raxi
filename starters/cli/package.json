@@ -1,0 +1,12 @@
+{
+    "name": "starter",
+    "scripts": {
+        "dev": "raxi build"
+    },
+    "dependencies": {
+        "raxi": "latest"
+    },
+    "devDependencies": {
+        "typescript:": "latest"
+    }
+}
