@@ -1,12 +1,12 @@
 ## raxi
-![npm](https://img.shields.io/npm/v/raxi) 
+
+![npm](https://img.shields.io/npm/v/raxi)
 
 Toolkit for modern typescript packages.
 
-- Mininaml
-- Fully typed 
-- Extendable 
-
+-   Mininaml
+-   Fully typed
+-   Extendable
 
 ## Getting started
 
