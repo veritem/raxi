@@ -1,6 +1,6 @@
 {
     "name": "raxi",
-    "version": "0.0.9",
+    "version": "0.0.10",
     "description": "A better typescript package development framework",
     "module": "dist/index.mjs",
     "types": "dist/index.d.ts",
