@@ -3,6 +3,7 @@ import fs from 'fs'
 import fse from 'fs-extra'
 import path from 'path'
 import prompts, { PromptObject } from 'prompts'
+import { __dirname } from './utils'
 
 type StarterPrompts = {
     title: string
