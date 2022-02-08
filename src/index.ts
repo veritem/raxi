@@ -1,7 +1,10 @@
 #!/usr/bin/env node
 
 import sade from 'sade'
+import { version } from "../package.json"
 import { init } from './init'
+
+
 
 const program = sade('raxi')
 
@@ -18,6 +21,7 @@ program
     //         process.exit(1)
     //     })
     // })
+    .version(version)
     .command('init')
     .describe('scafold new project')
     .action(async () => {

@@ -8,8 +8,12 @@
         "rootDir": ".",
         "moduleResolution": "node",
         "esModuleInterop": true,
+        "resolveJsonModule": true,
         "skipLibCheck": true,
         "forceConsistentCasingInFileNames": true
     },
-    "exclude": ["tests", "src/starters"]
+    "exclude": [
+        "tests",
+        "src/starters"
+    ]
 }
