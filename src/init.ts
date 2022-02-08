@@ -9,11 +9,13 @@ type StarterPrompts = {
     value: string
 }
 
-const startersPath = path.resolve(new URL(".", import.meta.url).pathname, '../', 'starters')
+const startersPath = path.resolve(
+    new URL('.', import.meta.url).pathname,
+    '../',
+    'starters'
+)
 
 function get_starters(): StarterPrompts[] {
-
-
     let directories: string[] = fs.readdirSync(startersPath)
 
     return directories
@@ -45,12 +47,8 @@ export async function init() {
 
     const response = await prompts(questions)
 
-
-
     const project_path: string = path.resolve(process.cwd(), response.name)
-    const template_path: string = path.join(startersPath,
-        response.type
-    )
+    const template_path: string = path.join(startersPath, response.type)
     const shared_path: string = path.resolve(startersPath, 'shared')
 
     if (fs.existsSync(project_path)) {

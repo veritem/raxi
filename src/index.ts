@@ -1,10 +1,8 @@
 #!/usr/bin/env node
 
 import sade from 'sade'
-import { version } from "../package.json"
+import { version } from '../package.json'
 import { init } from './init'
-
-
 
 const program = sade('raxi')
 

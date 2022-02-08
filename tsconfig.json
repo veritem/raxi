@@ -12,8 +12,5 @@
         "skipLibCheck": true,
         "forceConsistentCasingInFileNames": true
     },
-    "exclude": [
-        "tests",
-        "src/starters"
-    ]
+    "exclude": ["tests", "src/starters"]
 }
