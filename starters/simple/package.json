@@ -2,7 +2,8 @@
     "name": "monorepo",
     "scripts": {
         "build": "unbuild",
-        "dev": "unbuild --stub"
+        "dev": "unbuild --stub",
+        "release": "bumpp package.json --commit --push --tag"
     },
     "dependencies": {},
     "devDependencies": {

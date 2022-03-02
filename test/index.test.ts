@@ -79,12 +79,12 @@ function cleanPrompt<T extends { toString(): string }>(data: T): string {
         .join('\n')
 }
 
-function getPromptChoices(prompt: string) {
-    return prompt
-        .slice(prompt.indexOf('>') + 2)
-        .split('\n')
-        .map((s) => s.trim())
-}
+// function getPromptChoices(prompt: string) {
+//     return prompt
+//         .slice(prompt.indexOf('>') + 2)
+//         .split('\n')
+//         .map((s) => s.trim())
+// }
 
 function isSamePrompt(
     currentPrompt: string,

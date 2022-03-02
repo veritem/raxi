@@ -2,7 +2,7 @@
 
 ![npm](https://img.shields.io/npm/v/raxi)
 
-Toolkit for modern typescript packages.
+Toolkit for typescript packages development.
 
 -   Mininamal
 -   Fully typed
